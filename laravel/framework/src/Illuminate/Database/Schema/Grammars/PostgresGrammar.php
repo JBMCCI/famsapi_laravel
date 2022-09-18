@@ -39,7 +39,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileColumnExists($table)
     {
-        return "select column_name from information_schema.columns where table_name = '$table'";
+        return "select column_name as column_name from information_schema.columns where table_name = '$table'";
     }
 
     /**
